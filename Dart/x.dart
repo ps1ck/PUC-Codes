@@ -12,13 +12,13 @@ void main() {
   var codigo = stdin.readLineSync();
       
       print('Digite o valor do produto');
-  var preco = double.parse(stdin.readLineSync());
+  var preco = stdin.readLineSync();
       
       print('Digite a quantidade do produto');
-  var quantidade = int.parse(stdin.readLineSync());
+  var quantidade = stdin.readLineSync();
   
-  var precototal = calcularPrecoTotal (preco,quantidade);
+  var precototal = calcularPrecoTotal (double.parse(preco!), int.parse(quantidade!));
   
-          print ('$codigo! $nome! : $preco! x $quantidade! = $precototal!');
+          print ('($codigo) $nome: $preco x $quantidade = $precototal');
       
   }
